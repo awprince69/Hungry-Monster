@@ -1,0 +1,40 @@
+body{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+#mealsDiv{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 25px;
+    text-align:center;
+    padding: 30px;
+    
+}
+
+.foods{
+background-color:lightgray;
+border-radius: 10px 10px 10px;
+box-shadow: 20px 10px 40px lightgray;
+height: 282px;
+overflow:auto;
+}
+
+.foods img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+#textSpacing{
+    padding-top: 15px; ;
+}
+
+#mealDetail img{
+    width:450px;
+    height: 322px;
+}
+
+#errorMessage{
+    text-align: center;
+}
