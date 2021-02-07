@@ -1,22 +1,16 @@
 const searchMeals = () => {
     const inputValue = document.getElementById('inputValue').value;
+    document.getElementById('mealDetail').innerText = "";
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`)
         .then(response => response.json())
-        .then(data => {
-            if (inputValue == ""){
-                const showError = document.getElementById('errorMessage');
-                const errorMessage = document.createElement('h2');
-                errorMessage.innerText = `There are no search result for ${inputValue}`
-                showError.appendChild(errorMessage);
-            }
-            displaySearchMeals(data.meals)
-        })
+        .then(data => displaySearchMeals(data.meals))
         .catch(error => console.log(error))
 }
 
 
 const displaySearchMeals = meals => {
     const mealsDiv = document.getElementById('mealsDiv')
+    mealsDiv.innerText = " ";
     meals.forEach(mealsInfo => {
         const newDiv = document.createElement('div');
         newDiv.className = "foods"
