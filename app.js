@@ -4,7 +4,7 @@ const searchMeals = () => {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`)
         .then(response => response.json())
         .then(data => displaySearchMeals(data.meals))
-        .catch(error => console.log(error))
+        .catch(error => displayErrorMessage(`There are no such a result for '${inputValue}'`))
 }
 
 
@@ -31,11 +31,13 @@ const displayMealsDetails = name => {
     fetch(url)
         .then(res => res.json())
         .then(data => renderMealsInfo(data.meals[0]))
+        .catch(error=>console.log(error))
 }
 
 
 const renderMealsInfo = meal => {
     const mealDiv = document.getElementById('mealDetail')
+    document.getElementById('mealDetail').innerHTML = "";
     const mealInfo = `
     <img src="${meal.strMealThumb}">
     <h3> ${meal.strMeal}</h3>
@@ -53,4 +55,10 @@ const renderMealsInfo = meal => {
     <li>${meal.strIngredient10}</li>
     `
     mealDiv.innerHTML = mealInfo;
+}
+
+
+const displayErrorMessage= error=>{
+    const errorMessage = document.getElementById('errorMessage');
+    errorMessage.innerText= error;
 }

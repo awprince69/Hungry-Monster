@@ -37,4 +37,7 @@ overflow:auto;
 
 #errorMessage{
     text-align: center;
+    font-size: 30px;
+    color: rgb(150, 1, 1);
+    font-weight: 700;
 }
