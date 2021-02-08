@@ -28,10 +28,23 @@ overflow:auto;
 #textSpacing{
     padding-top: 15px; ;
 }
+#mealDetail{
+    padding-left: 30px;
+}
 
 #mealDetail img{
     width:450px;
     height: 322px;
+    padding: 5px;
+    border-radius: 40px;
+    box-shadow: 20px 10px 30px lightgray;
+}
+#textStyle{
+    margin-top: 25px;
+}
+
+#ingredient{
+    padding-left: 50px;
 }
 
 #errorMessage{

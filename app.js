@@ -50,7 +50,7 @@ const renderMealsInfo = meal => {
     document.getElementById('mealDetail').innerHTML = "";
     const mealInfo = `
     <img src="${meal.strMealThumb}">
-    <h3> ${meal.strMeal}</h3>
+    <h3 id="textStyle"> ${meal.strMeal}</h3>
     <h5> Ingredients</h5>
     `
     mealDiv.innerHTML = mealInfo;
