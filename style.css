@@ -6,10 +6,9 @@ body{
 #mealsDiv{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-gap: 25px;
+    grid-gap: 30px;
     text-align:center;
-    padding: 30px;
-    
+    padding: 30px;  
 }
 
 .foods{
@@ -40,4 +39,10 @@ overflow:auto;
     font-size: 30px;
     color: rgb(150, 1, 1);
     font-weight: 700;
+}
+
+#logo img{
+    position: relative;
+    width: 90.97px;
+    height: 66.93px;
 }
